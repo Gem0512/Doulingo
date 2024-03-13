@@ -3,7 +3,7 @@ import { Image, Text, View } from 'react-native'
 
 export default function Header() {
   return (
-    <View style={{flex: 1, flexDirection: 'row', justifyContent :'center',  paddingTop: 30,}}>
+    <View style={{ flexDirection: 'row', justifyContent :'center',  paddingTop: 30, paddingHorizontal: 10}}>
       <View style={{width: '80%', paddingLeft: 10}}>
          <Text style={{fontSize:24, color: 'white'}}>Hello Thanh Ngoc!!!</Text>
          <Text style={{fontSize:12, color: 'white'}}>Hôm nay bạn bạn muốn học gì?</Text>
