@@ -5,11 +5,11 @@ import Register from './Register';
 
 export default function GoalDaily({navigation}) {
   const languages = [
-    {code: 'en', flag: '../../assets/Images/flag/vn.webp', name: 'English'},
-    {code: 'fr', flag: '../../assets/Images/flag/vn.webp', name: 'French'},
-    {code: 'es', flag: '../../assets/Images/flag/vn.webp', name: 'Spanish'},
-    {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
-    {code: 're', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
+    {code: 'en', flag: '../../assets/Images/flag/vn.webp', name: '3 phút/ngày'},
+    {code: 'fr', flag: '../../assets/Images/flag/vn.webp', name: '10 phút/ngày'},
+    {code: 'es', flag: '../../assets/Images/flag/vn.webp', name: '15 phút/ngày'},
+    {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: '30 phút/ngày'},
+    // {code: 're', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
   ];
 
   const handleButtonPress = page => {

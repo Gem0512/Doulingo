@@ -34,8 +34,8 @@ export default function SelectType({navigation}) {
       flag: '../../assets/Images/flag/vn.webp',
       name: 'Ngữ pháp',
     },
-    {code: 'fr', flag: '../../assets/Images/flag/vn.webp', name: 'Nghe hiểu'},
-    {code: 'es', flag: '../../assets/Images/flag/vn.webp', name: 'Phát âm'},
+    {code: 'ngheHieu', flag: '../../assets/Images/flag/vn.webp', name: 'Nghe hiểu'},
+    {code: 'phatAm', flag: '../../assets/Images/flag/vn.webp', name: 'Phát âm'},
     // {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'Rất khó'},
     // {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
   ];

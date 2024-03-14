@@ -22,6 +22,12 @@ import SelectLevel from './src/screens/DoHomework/SelectLevel';
 import SelectType from './src/screens/DoHomework/SelectType';
 import TypeGrammar from './src/screens/DoHomework/Grammar/TypeGrammar';
 import DoGrammar from './src/screens/DoHomework/Grammar/DoGrammar';
+import DoGrammar1 from './src/screens/DoHomework/Grammar/DoGrammar1';
+import DoGrammar2 from './src/screens/DoHomework/Grammar/DoGrammar2';
+import TypeListening from './src/screens/DoHomework/Listening/TypeListening';
+import DoListening from './src/screens/DoHomework/Listening/DoListening';
+import TypePronounce from './src/screens/DoHomework/Pronounce/TypePronounce';
+import DoPronounce from './src/screens/DoHomework/Pronounce/DoPronounce';
 const Stack = createStackNavigator();
 function App(): React.JSX.Element {
   return (
@@ -90,6 +96,36 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="DoGrammar"
           component={DoGrammar}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DoGrammar1"
+          component={DoGrammar1}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DoGrammar2"
+          component={DoGrammar2}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TypeListening"
+          component={TypeListening}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DoListening"
+          component={DoListening}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TypePronounce"
+          component={TypePronounce}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DoPronounce"
+          component={DoPronounce}
           options={{headerShown: false}}
         />
         {/* <Stack.Screen name="Page2" component={Page2Screen} />

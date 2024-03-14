@@ -6,26 +6,38 @@ import SelectComponent from '../../../components/SelectComponent';
 import Header from '../../../components/Header';
 import Menu from '../../../components/Menu';
 import DoGrammar from './DoGrammar';
+import Exam from '../../Exam/Exam';
+import DoGrammar1 from './DoGrammar1';
+import DoGrammar2 from './DoGrammar2';
 
 export default function TypeGrammar({navigation}) {
   const languages = [
-    {code: 'en', flag: '../../assets/Images/flag/vn.webp', name: 'Trắc nghiệm'},
+    {code: 'tracNghiem', flag: '../../assets/Images/flag/vn.webp', name: 'Trắc nghiệm'},
     {
-      code: 'fr',
+      code: 'dienTu',
       flag: '../../assets/Images/flag/vn.webp',
       name: 'Điền từ còn thiếu',
     },
-    {code: 'es', flag: '../../assets/Images/flag/vn.webp', name: 'Sắp xếp từ'},
+    {code: 'sapXep', flag: '../../assets/Images/flag/vn.webp', name: 'Sắp xếp từ'},
     // {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'Rất khó'},
     // {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
   ];
-  const [value1, setValue1] = React.useState(null);
-  const handleButtonPress = page => {
+  const [value1, setValue1] = React.useState('tracNghiem');
+  const handleButtonPress = () => {
+    if (value1 === 'tracNghiem') {
+      navigation.navigate(DoGrammar);
+    } else {
+      if (value1 === 'dienTu') {
+        navigation.navigate(DoGrammar1);
+      } else {
+        navigation.navigate(DoGrammar2);
+      }
+    }
+
     // Thực hiện chuyển sang trang mới tương ứng với page
-    navigation.navigate(page);
   };
 
-  // console.log(value);
+  console.log(value1);
 
   return (
     <View
@@ -63,7 +75,7 @@ export default function TypeGrammar({navigation}) {
       </View>
       <View
         style={{
-          height: '30%',
+          height: '32%',
           display: 'flex',
           justifyContent: 'flex-end',
         //   marginTop: 50,
@@ -71,7 +83,7 @@ export default function TypeGrammar({navigation}) {
         }}>
         <TouchableOpacity
           style={styles.button1}
-          onPress={() => handleButtonPress(DoGrammar)}>
+          onPress={() => handleButtonPress()}>
           <Text style={{color: 'white'}}>DONE</Text>
         </TouchableOpacity>
       </View>

@@ -4,7 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import {RadioButton, Text} from 'react-native-paper';
 
 const LanguageSelection = ({languages}) => {
-  const [value, setValue] = React.useState(null);
+  const [value, setValue] = React.useState('en');
 
   const handleLanguageSelect = newValue => {
     setValue(newValue);

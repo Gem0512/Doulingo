@@ -4,6 +4,7 @@ import FunctionApp from '../components/FunctionApp';
 import Exam from './Exam/Exam';
 import Menu from '../components/Menu';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import Test from '../components/Test';
 export default function Home({navigation}) {
   return (
     <View style={styles.container}>
@@ -11,6 +12,7 @@ export default function Home({navigation}) {
         <Header style={styles.header} />
         <View style={styles.function}>
           <FunctionApp navigation={navigation} />
+          <Test></Test>
         </View>
         <View
           style={{

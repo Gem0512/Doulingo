@@ -9,23 +9,32 @@ import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import TypeGrammar from './Grammar/TypeGrammar';
 import {useRoute} from '@react-navigation/native';
+import TypeListening from './Listening/TypeListening';
+import TypePronounce from './Pronounce/TypePronounce';
 
 export default function SelectLevel({navigation}) {
   const languages = [
-    {code: 'en', flag: '../../assets/Images/flag/vn.webp', name: 'Dễ'},
-    {code: 'fr', flag: '../../assets/Images/flag/vn.webp', name: 'Trung bình'},
-    {code: 'es', flag: '../../assets/Images/flag/vn.webp', name: 'Khó'},
-    {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'Rất khó'},
+    {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'Dễ'},
+    {code: 'tb', flag: '../../assets/Images/flag/vn.webp', name: 'Trung bình'},
+    {code: 'kho', flag: '../../assets/Images/flag/vn.webp', name: 'Khó'},
+    {code: 'ratKho', flag: '../../assets/Images/flag/vn.webp', name: 'Rất khó'},
     // {code: 'de', flag: '../../assets/Images/flag/vn.webp', name: 'German'},
   ];
-  const [value1, setValue1] = React.useState(null);
+  const [value1, setValue1] = React.useState('de');
   // const {id} = navigation.params;
   const route = useRoute();
   const {id} = route.params;
-  const handleButtonPress = page => {
-    
+  const handleButtonPress = () => {
+    if (id === 'nguPhap') {
+      navigation.navigate(TypeGrammar);
+    } else {
+      if (id === 'ngheHieu') {
+        navigation.navigate(TypeListening);
+      } else {
+        navigation.navigate(TypePronounce);
+      }
+    }
     // Thực hiện chuyển sang trang mới tương ứng với page
-    navigation.navigate(page);
   };
 
   console.log(id);
@@ -75,7 +84,7 @@ export default function SelectLevel({navigation}) {
         }}>
         <TouchableOpacity
           style={styles.button1}
-          onPress={() => handleButtonPress(TypeGrammar)}>
+          onPress={() => handleButtonPress()}>
           <Text style={{color: 'white'}}> NEXT</Text>
         </TouchableOpacity>
       </View>
